@@ -17,15 +17,15 @@ import sys
 argv = sys.argv
 argv = argv[argv.index("--") + 1:]
 
-hd = float(argv[0])
-t = float(argv[1])
-l = float(argv[2])
-c = float(argv[3])
-s = float(argv[4])
-a = float(argv[5])
-fa = float(argv[6])
-hp = float(argv[7])
-h = float(argv[8])
+hd = float(argv[0]) / 0.57
+t = float(argv[1]) / 0.76
+l = float(argv[2]) / 0.59
+c = float(argv[3]) / 0.36
+s = float(argv[4]) / 0.95
+a = float(argv[5]) / 0.28
+fa = float(argv[6]) / 0.25
+hp = float(argv[7]) / 0.86
+h = float(argv[8]) / 1.765
 
 ob = bpy.context.object
 me = ob.data

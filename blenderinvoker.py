@@ -10,7 +10,7 @@ def run_blender(blenderPath, projectPath, scriptPath):
                     projectPath,
                     '--background',
                     '--python', scriptPath,
-                    '--', '2', '1', '1', '1', '1', '1', '1', '1', '1'])
+                    '--', '0.57', '0.76', '0.59', '0.36', '0.95', '0.28', '0.25', '0.86', '1.55'])
     #print(output.decode("utf-8"))
 
 run_blender(blenderPath, projectPath, scriptPath)
