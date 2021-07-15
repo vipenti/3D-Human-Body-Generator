@@ -11,9 +11,14 @@ def run_blender(blenderPath, projectPath, scriptPath):
                     '--background',
                     '--python', scriptPath,
                     '--', '0.57', '0.76', '0.59', '0.36', '0.95', '0.28', '0.25', '0.86', '1.55'])
-    #print(output.decode("utf-8"))
+
+
 
 run_blender(blenderPath, projectPath, scriptPath)
+
+def execute():
+    run_blender(blenderPath, projectPath, scriptPath)
+
 
 head = input("Head size: ")
 torso = input("Torso size: ")

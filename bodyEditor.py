@@ -200,5 +200,5 @@ bpy.ops.transform.resize(
 bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 
 # EXPORT
-exportPath = r"C:\Users\39347\Documents\GitHub\3D-Human-Body-Generator\projectexports\generatedbody.fbx"
-bpy.ops.export_scene.fbx(filepath=exportPath, use_selection=False)
+exportPath = r"C:\Users\39347\Documents\GitHub\3D-Human-Body-Generator\projectexports\generatedbody.glb"
+bpy.ops.export_scene.gltf(filepath=exportPath, use_selection=False)

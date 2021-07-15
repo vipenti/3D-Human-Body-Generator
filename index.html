@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Body Generator</title>
+</head>
+<body>
+    <div style="flex-direction: row; display:flex; margin: 2%;  justify-content: center; background-color:#e3e3e3">
+        <div style="width:30%; margin:2%;">
+            <form>
+                <div class="form-group">
+                    <label for="head">Head</label>
+                    <input type="text" class="form-control" id="head" placeholder="Default: 0.57m">
+                </div>
+                <div class="form-group">
+                    <label for="torso">Torso</label>
+                    <input type="text" class="form-control" id="torso" placeholder="Default: 0.76m">
+                </div>
+                <div class="form-group">
+                    <label for="hips">Hips</label>
+                    <input type="text" class="form-control" id="hips" placeholder="Default: 0.86m">
+                </div>
+                <div class="form-group">
+                    <label for="legs">Legs</label>
+                    <input type="text" class="form-control" id="legs" placeholder="Default: 0.59m">
+                </div>
+                <div class="form-group">
+                    <label for="calves">Calves</label>
+                    <input type="text" class="form-control" id="calves" placeholder="Default: 0.36m">
+                </div>
+                <div class="form-group">
+                    <label for="shoulders">Shoulders</label>
+                    <input type="text" class="form-control" id="shoulders" placeholder="Default: 0.95m">
+                </div>
+                <div class="form-group">
+                    <label for="arms">Arms</label>
+                    <input type="text" class="form-control" id="arms" placeholder="Default: 0.28">
+                </div>
+                <div class="form-group">
+                    <label for="forearms">Forearms</label>
+                    <input type="text" class="form-control" id="forearms" placeholder="Default: 0.25m">
+                </div>
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <input type="text" class="form-control" id="height" placeholder="Default: 1.75m">
+                </div>
+                <button type="submit" class="btn btn-primary">Generate</button>
+            </form>
+        </div>
+        <div style="">
+        <model-viewer style="height:850px; width:500px" src="projectexports\generatedbody.glb" alt="Generated human body"
+                      ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
+        </div>
+    </div>
+</body>
+</html>
