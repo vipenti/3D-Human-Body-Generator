@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Body Generator</title>
@@ -12,41 +13,41 @@
             <form>
                 <div class="form-group">
                     <label for="head">Head</label>
-                    <input type="text" class="form-control" id="head" placeholder="Default: 0.57m">
+                    <input type="number" class="form-control" id="head" value="0.57" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="torso">Torso</label>
-                    <input type="text" class="form-control" id="torso" placeholder="Default: 0.76m">
+                    <input type="number" class="form-control" id="torso" value="0.76" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="hips">Hips</label>
-                    <input type="text" class="form-control" id="hips" placeholder="Default: 0.86m">
+                    <input type="number" class="form-control" id="hips" value="0.86" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="legs">Legs</label>
-                    <input type="text" class="form-control" id="legs" placeholder="Default: 0.59m">
+                    <input type="number" class="form-control" id="legs" value="0.59" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="calves">Calves</label>
-                    <input type="text" class="form-control" id="calves" placeholder="Default: 0.36m">
+                    <input type="number" class="form-control" id="calves" value="0.36" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="shoulders">Shoulders</label>
-                    <input type="text" class="form-control" id="shoulders" placeholder="Default: 0.95m">
+                    <input type="number" class="form-control" id="shoulders" value="0.95" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="arms">Arms</label>
-                    <input type="text" class="form-control" id="arms" placeholder="Default: 0.28">
+                    <input type="number" class="form-control" id="arms" value="0.28" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="forearms">Forearms</label>
-                    <input type="text" class="form-control" id="forearms" placeholder="Default: 0.25m">
+                    <input type="number" class="form-control" id="forearms" value="0.25" step=".01" min="0.01" max="2">
                 </div>
                 <div class="form-group">
                     <label for="height">Height</label>
-                    <input type="text" class="form-control" id="height" placeholder="Default: 1.75m">
+                    <input type="number" class="form-control" id="height" value="1.76" step=".01" min="0.5" max="2.5">
                 </div>
-                <button type="submit" class="btn btn-primary">Generate</button>
+                <button type="button" onclick="onSubmit()" class="btn btn-primary">Generate</button>
             </form>
         </div>
         <div style="">
@@ -54,5 +55,43 @@
                       ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
         </div>
     </div>
+
+    <script>
+        function onSubmit() {
+
+            var height = document.getElementById("height").value;
+            var torso = document.getElementById("torso").value;
+            var head = document.getElementById("head").value;
+            var shoulders = document.getElementById("shoulders").value;
+            var legs = document.getElementById("legs").value;
+            var calves = document.getElementById("calves").value;
+            var hips = document.getElementById("hips").value;
+            var arms = document.getElementById("arms").value;
+            var forearms = document.getElementById("forearms").value;
+
+            var measurements = new Object();
+            measurements.height = height;
+            measurements.torso = torso;
+            measurements.head = head;
+            measurements.shoulders = shoulders;
+            measurements.legs = legs;
+            measurements.calves = calves;
+            measurements.hips = hips;
+            measurements.arms = arms;
+            measurements.forearms = forearms;
+
+            console.log(measurements);
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:5000/',
+                data: JSON.stringify(measurements),
+                success: function(data) { alert('data: ' + data); },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+
+        }
+    </script>
 </body>
 </html>
