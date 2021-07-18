@@ -1,12 +1,12 @@
 import flask
-from flask import request
+from flask import jsonify, request
 from flask_cors import CORS
 import blenderinvoker
 import json
+from pygltflib import GLTF2
 
 app = flask.Flask(__name__)
 CORS(app)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -18,7 +18,7 @@ def home():
         print(dicti["torso"])
         blenderinvoker.execute(dicti)
 
-    return  flask.current_app.send_static_file('..\index.html')
+    return "cane"
 
 
 app.run()

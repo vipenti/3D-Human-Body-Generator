@@ -86,10 +86,13 @@
                 type: 'POST',
                 url: 'http://127.0.0.1:5000/',
                 data: JSON.stringify(measurements),
-                success: function(data) { alert('data: ' + data); },
+                success: function(data) { },
                 contentType: "application/json",
                 dataType: 'json'
             });
+
+            setTimeout(function(){
+                location.reload(); }, 2500);
 
         }
     </script>
