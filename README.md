@@ -1,6 +1,6 @@
 <h1 align = "center">  :computer: 🎓 3D Deformable Human Body for virtual fitting and other applications 🎓 :computer: </h1>
 
-<p align = "center"> A project for my internship at the VRLab, at the University of Salerno </p>
+<p align = "center"> A project for my internship at the VRLab, at University of Salerno </p>
 
 <p> This project goal is to create a fully customizable 3D human body with your body measurements.
 All that needs to be done is to enter the dimensions of the different body parts and it will generate a human body with those proportions for you.
