@@ -1,4 +1,4 @@
-<h1 align = "center">  :computer: 3D Deformable Human Body for virtual fitting and other applications  :computer: </h1>
+<h1 align = "center">  :computer: 🎓 3D Deformable Human Body for virtual fitting and other applications 🎓 :computer: </h1>
 
 <p align = "center"> A project for my internship at the VRLab, at the University of Salerno </p>
 
