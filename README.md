@@ -22,7 +22,7 @@ Then, follow these steps:
 3. Run <i>webserver.py</i>
 4. Open <i>index.html</i> and it's done!
 
-<div align = "center"> <img  src = "references/projectscreenshot.PNG" width = "580" heigth = "520"> </div>
+<div align = "center"> <img  src = "references/projectscreenshot.PNG" width = "740" heigth = "520"> </div>
 
 
 ### Authors
