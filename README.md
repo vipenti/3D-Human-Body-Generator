@@ -14,7 +14,7 @@ The default body is generated with the measurements shown below. </p>
 Before getting started, make sure you have all of these installed on your computer:
 - Python 3.7 or above
 - Blender 2.9.0
-- Any IDE but IntelliJ is reccomended
+- Any IDE but PyCharm is reccomended
 
 Then, follow these steps: 
 1. Clone this repository
