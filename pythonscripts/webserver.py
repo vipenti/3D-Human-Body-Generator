@@ -18,7 +18,7 @@ def home():
         print(dicti["torso"])
         blenderinvoker.execute(dicti)
 
-    return "cane"
+    return "done"
 
 
 app.run()
